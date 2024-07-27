@@ -25,7 +25,7 @@ spec:
                 key: ENV
                 name: hello-world-cm        
           securityContext: {}
-          image: "quay.io/weluo/hello-world-python:v1.0"
+          image: "quay.io/weluo/hello-python:v1.0"
           imagePullPolicy: Always
           ports:
             - name: http
