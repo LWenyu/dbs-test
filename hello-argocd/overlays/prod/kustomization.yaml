@@ -1,0 +1,6 @@
+namespace: argocd-prod
+resources:
+  - ../../base/
+patches:
+  - path: route.yaml
+  - path: configmap.yaml
