@@ -37,7 +37,7 @@ $ oc extract secret/argocd-cluster --to -
 
 Open the browser and point the URL to the route, use `admin` and the `password` above to login.
 
-## Argocd Binary
+### Argocd Binary
 Download the argocd binary in bastion
 
 ```shell
@@ -46,7 +46,7 @@ sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 rm argocd-linux-amd64
 ```
 
-## Adding Cluster
+### Adding Cluster
 Add the cluster using 'argocd' CLI 
 First login to bastion, test the login to the argocd-server
 ```shell
@@ -70,7 +70,7 @@ Cluster 'https://api.cluster-lplz5.lplz5.sandbox1583.opentlc.com:6443' added
 ```
 Check in the argoCD if the new cluster has been added.
 
-## ArgoCD Configuration
+### ArgoCD Configuration
 - Add cluster (already done)
 - Add projects (use GUI)
 - Add repository (use GUI)
