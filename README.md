@@ -1,29 +1,33 @@
 # dbs-test
 
-## Set up cluster and install Argocd 
+## 1. Set up cluster
 Cluster is set up using Red Hat Demo
+
+## 2. Install ArgoCD
 - Install community argoCD operator
 - Create `argocd-platform` projects, switch to that project.
 - Create ArgoCD instance (take the default configurations), name as `argocd`
-- Wait till the pods are up
 
-## Containerized Application using Python Flask library
+## 3. Create Git Repo containing application
+
+### Containerized Application using Python Flask library
 Login to the quay and push the images to the quay registry
 
 
 ```shell
-$ podman login -u tanirvan quay.io
-$ podman build . -t quay.io/tanirvan/hello-python:v1.0
-$ podman push quay.io/tanirvan/hello-python:v1.0
+$ podman login -u weluo quay.io
+$ podman build . -t quay.io/weluo/hello-python:v1.0
+$ podman push quay.io/weluo/hello-python:v1.0
 ```
 
 Test image
 ```shell
-$ oc new-app --name hello-python quay.io/tanirvan/hello-python:v1.0
+$ oc new-app --name hello-python quay.io/weluo/hello-python:v1.0
 $ oc create route edge hello-world --service hello-world
 $ curl -kv https://hello-world.apps.example.com
 ```
 
+## 4. Configure ArgoCD
 Retrieve 'admin' password from secret
 ```shell
 $ oc extract secret/argocd-cluster --to -
@@ -79,4 +83,7 @@ $ oc new-project argocd-prod
 ```
 Then create application for Dev and Prod namespace.
 Verify if the pods are running in the respective namespaes.
+
+
+
 
