@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-world
 spec:
-  host: hello-world-prod.apps.cluster-lplz5.lplz5.sandbox1583.opentlc.com
+  host: hello-world-prod.apps.cluster-nzlhg.nzlhg.sandbox2535.opentlc.com
   port:
     targetPort: http
   tls:

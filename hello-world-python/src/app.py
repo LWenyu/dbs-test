@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     # Read from environment variables, which we have set in the deployment using configmap
-    statement = os.environ['APPENV'] + ": Hello world - v1.0\n\n"
+    statement = os.environ['APPENV'] + ": Hello world - v2.0\n\n"
     return statement
 
 if __name__ == "__main__":

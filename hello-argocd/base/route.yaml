@@ -6,7 +6,7 @@ metadata:
     app: hello-world
 spec:
   # Remember to change it for different cluster
-  host: hello-world.apps.cluster-lplz5.lplz5.sandbox1583.opentlc.com
+  host: hello-world.apps.cluster-nzlhg.nzlhg.sandbox2535.opentlc.com
   port:
     targetPort: http
   tls:
